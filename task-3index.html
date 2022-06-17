@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>Array 1 =[1,2,3,4,5,6,7,8,9]</strong></h1>
+        <br>
+        <h1><strong>Array 2 = [1,2,5,6,7,8]</strong></h1>
+    </div>
+    <script>
+
+                const arr1 = [1,2,3,4,5,6,7,8,9]
+                const arr2 = [1,2,5,6,7,8] 
+                
+                var count = 1;
+                var results = "";
+                const all = [...arr1,...arr2]
+                all.sort();
+                    for (var i =0; i< all.length; i++)
+                     {
+                        if (all[i] == all[i+1]) 
+                        {
+                            count +=1;
+                        }
+                        else
+                        {
+                            results += all[i] + " ---> " + count + " times\n"
+                            count = 1;
+                        }
+                    }
+                    console.log(all);
+                    console.log(results);
+                    
+
+//         function hasDuplicates(array) {
+//     var valuesSoFar = [1,2,3,1,5,2];
+//     for (var i = 0; i < array.length; ++i) {
+//         var value = array[i];
+//         if (valuesSoFar.indexOf(value) !== -1) {
+//             return true;
+//         }
+//         valuesSoFar.push(value);
+//     }
+//     return false;
+//     console.log(hasDuplicates);
+// }
+
+
+// const arr3 = arr1.filter((data) => arr2.includes(data));
+// results += arr3 + "-->" + count + "times\n";
+// count = 1;
+// console.log(arr3);
+// console.log("\n");
+// console.log(results);          
+// how to combine two arry  
+// use for loop
+             
+    </script>
+</body>
+</html>
